@@ -1,28 +1,18 @@
-import { useState } from 'react'
+import React from 'react'
+import Header from './components/Header'
+import Sections from './components/Sections'
+import Gallery from './components/Gallery'
+import ContactFooter from './components/ContactFooter'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div style={{ scrollBehavior: 'smooth' }} className="min-h-screen bg-[#0B1B3B] text-[#F5F1E6] antialiased">
+      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-[#0B1B3B] via-[#0B1B3B] to-[#1a1a1a]" />
+      <div className="fixed inset-0 -z-10 opacity-[0.07]" style={{ backgroundImage: 'radial-gradient(1200px 400px at 20% 0%, rgba(201,162,39,0.25), transparent), radial-gradient(800px 300px at 80% 10%, rgba(108,26,26,0.25), transparent)' }} />
+      <Header />
+      <Sections />
+      <Gallery />
+      <ContactFooter />
     </div>
   )
 }
-
-export default App
